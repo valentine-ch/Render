@@ -15,7 +15,7 @@ scheduler = AsyncIOScheduler()
 
 async def send_request():
     async with aiohttp.ClientSession() as session:
-        response = await session.get(url=ADDRESS)
+        response = await session.get(url=f"{ADDRESS}/ping")
 
 
 @app.on_event("startup")
